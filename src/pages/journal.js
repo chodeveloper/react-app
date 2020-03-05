@@ -1,5 +1,6 @@
 import React from 'react';
 import JournalList from '../components/journalList';
+// import NotFoundPage from './NotFound';
 import JournalContent from './journal-content';
 
 const JournalPage = ({ match }) => {
@@ -7,6 +8,7 @@ const JournalPage = ({ match }) => {
     const journal = JournalContent.find(journal => journal.date === date); 
 
     if (!journal) return <h3>Your journal does not exist :(</h3>
+    // if (!journal) return <NotFoundPage />;
 
     const otherJournals = JournalContent.filter(journal => journal.date !== date);
 
